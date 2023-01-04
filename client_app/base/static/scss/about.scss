@@ -1,0 +1,84 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+body {
+    background: url(../../media/assets/about.jpg);
+    background-size: cover;
+    isolation: isolate;
+
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        //@include gradient-background;
+        background: $primary-blue;
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+    }
+}
+
+.navbar{
+    z-index: 2;
+
+    li a:hover {
+        color: $primary-blue;
+    }
+}
+
+.about {
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    position: relative;
+
+    &__title {
+        text-align: center;
+        color: white;
+        
+        h1 {
+            line-height: 0.9;
+            font-size: 6rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.5);
+        }
+    }
+
+    &__subtitle {
+        margin-top: -1em;
+        color: white;
+
+        h3 {
+            font-size: 1.5em;
+        }
+    }
+
+    &__icons{
+        margin-top: 1em;
+        display: flex;
+        gap: 3em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 8em;
+        height: 8em;
+        padding: 2em;
+        background: white;
+        opacity: 0.8;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 4em;
+            color: red;
+        }
+    }
+}

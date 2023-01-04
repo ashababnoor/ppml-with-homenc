@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extend_body %}
+
+<div class="container home-page">
+    <div class="mt-5 text-center">
+        <h2>Secure Cloud &#8212; Client Portal</h2>
+        <h5>Home Page &nbsp; <code>&lt;In Development&gt;</code></h5>
+    </div>
+    <hr>
+    <div class="mt-5">
+    <p>
+        Here we have a demo example of how your data can be sent to the cloud without the cloud knowing what your data is. The cloud is hosting a diabetes predicting model trained with public data. You can fill-out a questionaire about your health information and your given information will be encrypted and sent to the cloud.
+        <br>
+        The result generated from the cloud can then be decrypted by you using your private key and you can see the test results based on your given information.
+    </p>
+    <a class="btn btn-primary" href="{% url 'base:questionaire' %}">Fill-out the questionaire</a>
+    </div>
+</div>
+{% endblock extend_body %}

@@ -1,0 +1,26 @@
+@mixin gradient-background($deg: 90deg) {
+    background-image: linear-gradient(
+        $deg, 
+        #007BFF, 
+        #6610F2
+    );
+}
+
+@mixin gradient-text {
+    @include gradient-background;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent  ;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin main-section {
+    margin: 2em auto 4em;
+    width: 60em;
+    min-height: 90vh;
+}

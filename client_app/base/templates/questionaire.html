@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extend_body %}
+
+<div class="container home-page">
+    <div class="mt-5 text-center">
+        <h2>Secure Cloud &#8212; Client Portal</h2>
+        <h5>Diabetes Questionaire &nbsp; <code>&lt;In Development&gt;</code></h5>
+    </div>
+    <hr>
+    <div class="my-5">
+    <p class="my-3">(<strong>For Yes/No Questions:</strong> No = 0, Yes = 1)</p>
+    <form method="POST" class="">
+        {% csrf_token %}
+        {% comment %} {{ form }} {% endcomment %}
+
+        {% crispy form %}
+    </form>
+    </div>
+</div>
+{% endblock extend_body %}

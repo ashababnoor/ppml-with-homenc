@@ -1,0 +1,370 @@
+/* Colors */
+/* Pop variations */
+/* Light variations */
+/* Deep variations */
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Light-webfont.woff);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-LightItalic-webfont.woff);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Regular-webfont.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Italic-webfont.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Medium-webfont.woff);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-MediumItalic-webfont.woff);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Medium-webfont.woff);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-MediumItalic-webfont.woff);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Bold-webfont.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-BoldItalic-webfont.woff);
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-Black-webfont.woff);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../assets/fonts/Roboto-BlackItalic-webfont.woff);
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(../../assets/fonts/RobotoSlab-Regular-webfont.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(../../assets/fonts/RobotoSlab-Bold-webfont.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  min-width: 100%;
+  font-size: 1em;
+  color: #222;
+  padding-top: 0.5em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 0.5em;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 0.5em rgba(187, 187, 187, 0.5);
+}
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2em;
+  font-weight: bold;
+  align-items: center;
+  justify-content: flex-end;
+  color: #111;
+}
+.navbar-brand img {
+  height: 1.2em;
+  margin-right: 0.3em;
+}
+.navbar li {
+  padding-left: 0.8em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.navbar li a {
+  color: #222;
+}
+.navbar li a:hover {
+  color: #888;
+  border-bottom: 2px solid linear-gradient(90deg, #007BFF, #6610F2);
+}
+.navbar .container-fluid {
+  max-width: 80ch;
+}
+
+#nav-text {
+  font-family: var(--font-roboto-slab);
+  font-weight: 900;
+  font-size: 1.6em;
+  color: var(--clr-primary-900);
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+  border: none;
+}
+
+.footer {
+  color: #fff;
+}
+.footer__top {
+  background: #333;
+  display: grid;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 1.5em;
+  grid-template-columns: auto auto;
+}
+.footer__top__contact {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.footer__top__contact a {
+  font-size: 1.1em;
+  color: white;
+  margin-right: 0.3em;
+}
+.footer__top__contact a:hover {
+  color: #888;
+  text-decoration: none;
+}
+.footer__top__about {
+  display: flex;
+  font-size: 1.35em;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+}
+.footer__top__about a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__top__about a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__top__about img {
+  height: 1.35em;
+  margin-right: 0.5em;
+  margin-bottom: 0em;
+}
+.footer__bottom {
+  color: #888;
+  background: #222;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+}
+.footer--linegap {
+  display: inline-block;
+  margin-bottom: 0.3em;
+}
+
+.admin-confirm-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin-confirm-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.admin-confirm-container div .title h1 {
+  display: block;
+  font-size: 4.5em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+}
+.admin-confirm-container div .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+}
+.admin-confirm-container div .buttons a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.3em 1em;
+}
+.admin-confirm-container div .buttons a:hover {
+  text-decoration: none;
+}
+.admin-confirm-container div .yes-btn {
+  flex-grow: 1;
+}
+.admin-confirm-container div .yes-btn a {
+  color: #28a745;
+  border: 3px solid #28a745;
+}
+.admin-confirm-container div .yes-btn a:hover {
+  color: white;
+  background: #28a745;
+}
+.admin-confirm-container div .no-btn {
+  flex-grow: 1;
+}
+.admin-confirm-container div .no-btn a {
+  color: white;
+  background: #dc3545;
+  border: 3px solid #dc3545;
+}
+.admin-confirm-container div .no-btn a:hover {
+  color: white;
+  background: #bd2130;
+  border: 3px solid #bd2130;
+}
+
+.main-section {
+  margin: 2em auto 4em;
+  width: 60em;
+  min-height: 90vh;
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #007BFF, #6610F2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(45deg, #007BFF, #6610F2);
+  color: white;
+  overflow: hidden;
+  text-decoration: none;
+}
+.btn-gradient:hover {
+  text-decoration: none;
+  background-image: linear-gradient(90deg, #007BFF, #6610F2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  border-image-source: linear-gradient(90deg, #007BFF, #6610F2);
+  border-image-slice: 1;
+  border-image-width: 2.5px;
+  border-image-outset: 0em;
+}
+
+.btn-outline-gradient {
+  text-decoration: none;
+  background-image: linear-gradient(90deg, #007BFF, #6610F2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  border: none;
+  border-image-source: linear-gradient(90deg, #007BFF, #6610F2);
+  border-image-slice: 1;
+  border-image-width: 2.5px;
+  border-image-outset: 0em;
+}
+.btn-outline-gradient:hover {
+  background-image: linear-gradient(45deg, #007BFF, #6610F2);
+  color: white;
+  overflow: hidden;
+  text-decoration: none;
+  border: none;
+  -o-border-image: none;
+     border-image: none;
+}
+
+.gradient-link {
+  background-image: linear-gradient(90deg, #007BFF, #6610F2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+}
+.gradient-link:hover {
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+.gradient-text {
+  background-image: linear-gradient(90deg, #007BFF, #6610F2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-columns {
+  -moz-column-count: 3;
+       column-count: 3;
+}
+
+code em {
+  background: #e5e5e5;
+  border-radius: 5px;
+  padding: 0.25em 0.4em;
+}
+
+.container {
+  max-width: 80ch;
+}
+
+.landing-page div .btn {
+  padding-inline: 3em;
+  padding-block: 1em;
+}
