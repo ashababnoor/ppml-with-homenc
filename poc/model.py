@@ -8,28 +8,35 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 
 class LinearModel:
+    dataset_filename = "diabetes.csv"
+
     def __init__(self):
+        self.df = pd.read_csv(self.dataset_filename)
+        self.y = self.df.Diabetes_binary
+        self.X = self.df.drop("Diabetes_binary", axis=1)
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+            self.X, self.y, test_size=0.2, random_state=0
+        )
         pass
 
     def getResults(self):
-        df = pd.read_csv("diabetes.csv")
-        y = df.Diabetes_binary
-        X = df.drop("Diabetes_binary", axis=1)
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=0
-        )
-        reg = LinearRegression().fit(X_train, y_train)
-        y_pred = reg.predict(X_test)
-        RMSE = pow(mean_squared_error(y_pred, y_test), 0.5)
-        R = r2_score(y_pred, y_test)
+        reg = LinearRegression().fit(self.X_train, self.y_train)
+        y_pred = reg.predict(self.X_test)
+        RMSE = pow(mean_squared_error(y_pred, self.y_test), 0.5)
+        R = r2_score(y_pred, self.y_test)
         return reg, y_pred, RMSE, R
 
     def getCoef(self):
         return self.getResults()[0].coef_
+    
+    def getTestData(self):
+        return self.X_test, self.y_train
 
 
 def main():
-    cof = LinearModel().getCoef()
+    lin = LinearModel()
+    cof = lin.getCoef()
+    print("Linear Regression model trained on `{}` dataset\n".format(lin.dataset_filename))
     print("The trained weights are: \n", cof)
 
 

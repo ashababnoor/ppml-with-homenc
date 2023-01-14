@@ -18,6 +18,8 @@ def computeData():
     enc_nums_rec = [
         paillier.EncryptedNumber(pubkey, int(x[0], int(x[1]))) for x in data["values"]
     ]
+    print("Enc Nums Rec:\n", enc_nums_rec)
+    
     results = sum([mycoef[i] * enc_nums_rec[i] for i in range(len(mycoef))])
     return results, pubkey
 
