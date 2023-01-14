@@ -4,13 +4,13 @@
 - cloud-server contains the Django project for processing user data and running machine learning algorithms
 - HElib and SEAL are homomorphic encryption libraries
 - poc contains the simplified backend code that shows how the main thing works. Run the following steps to see how it works:
-  ```bash
+  ```sh
   cd poc
   bash runbook.sh
   ```
 
   Inside runbook.sh
-  ```bash
+  ```sh
   python3 client.py
   python3 model.py
   python3 server.py
