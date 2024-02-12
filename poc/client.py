@@ -8,12 +8,12 @@ def storeKeys():
     keys = {}
     keys["public_key"] = {"n": public_key.n}
     keys["private_key"] = {"p": private_key.p, "q": private_key.q}
-    with open("userkeys.json", "w") as file:
+    with open("json_files/userkeys.json", "w") as file:
         json.dump(keys, file)
 
 
 def getKeys():
-    with open("userkeys.json", "r") as file:
+    with open("json_files/userkeys.json", "r") as file:
         keys = json.load(file)
         pub_key = paillier.PaillierPublicKey(n=int(keys["public_key"]["n"]))
         priv_key = paillier.PaillierPrivateKey(
@@ -33,7 +33,7 @@ def serializeData(public_key, data):
     return serialized
 
 def loadAnswer():
-    with open("answer.json", "r") as file:
+    with open("json_files/answer.json", "r") as file:
         ans = json.load(file)
         answer = json.loads(ans)
         return answer
